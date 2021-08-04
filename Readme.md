@@ -2,24 +2,24 @@
 # TypeFormer
 ---
 
-## The Team ��:
+## The Team 🌐 :
 ---
 ### Team Platformer
 
-| Pranav Mahajan ��  | Patrick Grigsby  ✨ | Annamalai Subramaniam ��|
+| Pranav Mahajan  🚀 | Patrick Grigsby  ✨ | Annamalai Subramaniam ⚡️ |
 | --------------      | -----------------    | --------------------- |
 | Team Lead           | Graphics Designer    | Lead Developer        |
 
 ---
 
-## Summary:
+## Summary 📝 :
 ---
 
 The idea behind our game is to create a classic platformer with a twist, instead of using simple navigational keys to move, the player will have to type out words in order to keep the character moving and score points! The game is set to be in a modern context. There may be other objects in the game further complicating the game and improving it.
 
 ---
 
-## Technologies:
+## Technologies 🔨 :
 ---
 
 + Technologies, tools, Web APIs, Web Servers that you plan to use and how they all fit together to satisfy the project requirements 
