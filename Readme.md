@@ -1,5 +1,5 @@
 
-# TypeFormer
+# TypeRunner
 ---
 
 ## The Team 🌐 :
