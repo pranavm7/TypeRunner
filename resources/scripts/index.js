@@ -13,6 +13,7 @@ const config = {
         arcade: { gravity: false}
     },
     pixelArt: true,
+    backgroundColor: 0x000000,
 };
 
 //  Game Settings can go here.
