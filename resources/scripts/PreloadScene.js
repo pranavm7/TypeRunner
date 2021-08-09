@@ -29,8 +29,16 @@ class PreloadScene extends Phaser.Scene{
     create(){
         //Adds loading text
         this.add.text(20, 20, "Loading game...");
-
+        //starts the GameScene.js
         this.Scene.start("playGame");
+
+        //creates animation for the character at a rate of 4 frames per second
+        this.anims.create({
+            key: "character.anim",
+            frames: this.anims.generateFrameNumbers("character"),
+            frameRate: 4,
+            repeat: -1
+        });
     }
 
 }
