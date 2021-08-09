@@ -2,12 +2,12 @@ const config = {
     type: Phaser.AUTO,
     parent: 'game',
     width: 800,
-    height: 640,
+    height: 750,
     scale: {
         mode: Phaser.Scale.RESIZE,
-        autoCenter: Phaser.Scale.CENTER_BOTH
+        autoCenter: Phaser.Scale.CENTER_BOTH,
     },
-    scene: [MenuScene,],
+    scene: [MenuScene],
     physics: {
         default: 'arcade',
         arcade: { gravity: false}
