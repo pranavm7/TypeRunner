@@ -16,7 +16,8 @@ class PreloadScene extends Phaser.Scene{
         this.load.image("background", "resources/sprites/Background.png");
         this.load.image("moon", "resources/sprites/Moon.png");
         this.load.spritesheet("corruption", "resources/sprites/Corruption.png", {
-            
+            frameWidth: 16,
+            frameHeight: 256
         })
 
         //preloading the platforms as images
@@ -47,6 +48,14 @@ class PreloadScene extends Phaser.Scene{
             frameRate: 4,
             repeat: -1
         });
+
+        //create corruption animation
+        this.anims.create({
+            key: "corruption.anim",
+            frames: this.anims.generateFrameNumbers("corruption"),
+            frameRate: 4,
+            repeat: -1
+        })
     }
 
 }
