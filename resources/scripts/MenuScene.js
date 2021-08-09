@@ -14,6 +14,8 @@ class MenuScene extends Phaser.Scene{
         back.setOrigin(0,0);
         var text = this.add.text(100,100, 'Welcome to my game!');
 
+        this.scene.start("bootGame");
+
     }
    
 }
