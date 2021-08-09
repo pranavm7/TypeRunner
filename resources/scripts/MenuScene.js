@@ -1,21 +1,20 @@
 class MenuScene extends Phaser.Scene{
     constructor() {
-        super("menuScene");
+        super({key: "menuScene"});
 }
 preload(){
     //preloading the background buildings as images
-    this.load.image("building1", "resources/sprites/Building.png");
-    //preloading the font
-    this.load.bitmapFont("pixelFont", "resources/font/font.png", "resources/font/font.xml");
+    this.load.image("Background", "resources/sprites/Background.png");
+   
 
     }
 
     create(){
-        var back = this.add.sprite(0,0, 'building1');
-        back.setOrgin(0,0);
-    
-        var text = this.add.text(100,100, 'Welcome To My Game!');
+        var back = this.add.sprite(0,0, 'Background');
+        back.setOrigin(0,0);
+        var text = this.add.text(100,100, 'Welcome to my game!');
+
     }
    
 }
-
+export default MenuScene;
