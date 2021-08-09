@@ -62,6 +62,8 @@ class GameScene extends Phaser.Scene {
         graphics.closePath();
         graphics.fillPath();
 
+
+        //black box for the paragraph text
         var graphics2 = this.add.graphics();
         graphics2.fillStyle(0x000000, 1);
         graphics2.beginPath();
@@ -72,6 +74,23 @@ class GameScene extends Phaser.Scene {
         graphics2.lineTo(0, config.height);
         graphics2.closePath();
         graphics2.fillPath();
+
+        //Score updater from phaser tutorial 1
+        this.score = 0;
+        this.scoreLabel = this.add.bitmapText(20, 10, "pixelFont", "SCORE ", 32)
+        var scoreFormatted = this.zeroPad(this.score, 6);
+        this.scoreLabel.text = "SCORE " + scoreFormatted;
+
+
+        //Timer functionality, initialTime decrements each second and after 5, the game can begin
+        this.initialTime = 5;
+
+        this.countdown = this.add.bitmapText(config.width-150, 10, "pixelFont", 'Ready? ' + this.formatTime(this.initialTime), 32);
+
+        this.timedEvent = this.time.addEvent({ delay: 1000, callback: this.onEvent, callbackScope: this, loop: true });
+
+        
+
     }
 
     update() {
@@ -80,6 +99,7 @@ class GameScene extends Phaser.Scene {
         //animate platform
         this.platform.tilePositionX += 5;
 
+        //sends buildings to the moveBuilding function
         this.moveBuilding(this.building1, 4);
         this.moveBuilding(this.building2, 1);
         this.moveBuilding(this.building3, 2);
@@ -93,6 +113,10 @@ class GameScene extends Phaser.Scene {
         this.moveBuilding(this.building11, 1.1);
         this.moveBuilding(this.building12, 1.3);
         this.moveBuilding(this.building13, 1.2);
+
+
+
+
 
     }
 
@@ -133,6 +157,7 @@ class GameScene extends Phaser.Scene {
 
     // }
 
+    //adds parallax to chosen buildings
     moveBuilding(building, speed) {
         building.x -= speed;
         if (building.x < -100) {
@@ -140,8 +165,51 @@ class GameScene extends Phaser.Scene {
         }
     }
 
+    //places the buildings in the front of the queue
     resetBuildingPos(building) {
         building.x = config.width + (Math.random()%10 *1000);
+    }
+
+    //Formats the time in seconds
+    formatTime(seconds){
+        // Minutes
+        
+        // Seconds
+        this.partInSeconds = seconds%60;
+        // Adds left zeros to seconds
+        this.partInSeconds = this.partInSeconds.toString().padStart(2,'0');
+        // Returns formated time
+        if (seconds < 1){
+            return '';
+        }
+        return `${this.partInSeconds}`;
+    }
+
+    //updates timer each time the coundown updates
+    onEvent ()
+    {
+        if(this.initialTime == 1) {
+            this.initialTime -= 1;
+            this.countdown.setText('Go!');
+            
+        } else if (this.initialTime < 1) {
+            this.countdown.setText('');
+        } 
+        else {
+            this.initialTime -= 1; // One second
+            this.countdown.setText('Ready? ' + this.formatTime(this.initialTime));
+        }
+         
+
+    }
+
+    //zeropad function for the score from phaser tutorial 1
+    zeroPad(number, size){
+        var stringNumber = String(number);
+        while(stringNumber.length < (size || 2)){
+            stringNumber = "0" + stringNumber;
+        }
+        return stringNumber;
     }
     
 }

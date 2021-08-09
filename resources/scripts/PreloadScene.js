@@ -56,6 +56,8 @@ class PreloadScene extends Phaser.Scene{
             repeat: -1
         })
 
+        
+
         //starts the GameScene.js after 5 seconds
         this.time.addEvent({
             delay: 500,
