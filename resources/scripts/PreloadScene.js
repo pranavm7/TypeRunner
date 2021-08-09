@@ -1,4 +1,7 @@
 class PreloadScene extends Phaser.Scene{
+    constructor() {
+            super("bootGame");
+    }
 
     preload(){
         //preloading the background buildings as images
@@ -21,6 +24,10 @@ class PreloadScene extends Phaser.Scene{
 
         //preloading the font
         this.load.bitmapFont("pixelFont", "resources/font/font.png", "resources/font/font.xml");
+    }
+
+    create(){
+
     }
 
 }
