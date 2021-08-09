@@ -27,7 +27,10 @@ class PreloadScene extends Phaser.Scene{
     }
 
     create(){
+        //Adds loading text
+        this.add.text(20, 20, "Loading game...");
 
+        this.Scene.start("playGame");
     }
 
 }
