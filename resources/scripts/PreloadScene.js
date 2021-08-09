@@ -18,7 +18,9 @@ class PreloadScene extends Phaser.Scene{
             frameWidth: 34,
             frameHeight: 32
         });
-        
+
+        //preloading the font
+        this.load.bitmapFont("pixelFont", "resources/font/font.png", "resources/font/font.xml");
     }
 
 }
