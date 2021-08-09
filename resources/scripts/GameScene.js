@@ -19,13 +19,28 @@ class GameScene extends Phaser.Scene {
         this.background2 = this.add.sprite(config.width - 100, 120, "moon");
 
         //buildings
-        this.building2 = this.add.sprite(config.width, config.height - 240, "building2")
-        this.building1 = this.add.sprite(config.width, config.height - 300, "building1")
+        this.building2 = this.add.sprite(config.width, config.height - 260, "building2");
+        this.building9 = this.add.sprite(config.width, config.height - 260, "building2");
+        this.building10 = this.add.sprite(config.width, config.height - 260, "building2");
+        this.building11 = this.add.sprite(config.width, config.height - 260, "building2");
+        this.building12 = this.add.sprite(config.width, config.height - 260, "building2");
+        this.building13 = this.add.sprite(config.width, config.height - 260, "building2");
+        this.building8 = this.add.sprite(config.width, config.height - 250, "building6");
+        this.building3 = this.add.sprite(config.width, config.height - 500, "building3");
+        this.building6 = this.add.sprite(config.width, config.height - 300, "building6");
+        this.building5 = this.add.sprite(config.width, config.height - 360, "building5");
+        this.building4 = this.add.sprite(config.width, config.height - 350, "building4");
+        this.building1 = this.add.sprite(config.width, config.height - 300, "building1");
+        
+        this.building7 = this.add.sprite(config.width, config.height - 350, "building1");
+        
+        
+        
         
         //adds platform
         this.platform = this.add.tileSprite(config.width/2, config.height/2 + 144, config.width, 32, "platform4");
         //adds computerman
-        this.character = this.add.sprite(136, config.height/2, "character");
+        this.character = this.add.sprite(200, config.height/2, "character");
         //adds corruption
         this.corruption = this.add.sprite(32, config.height/2, "corruption");
 
@@ -66,7 +81,18 @@ class GameScene extends Phaser.Scene {
         this.platform.tilePositionX += 5;
 
         this.moveBuilding(this.building1, 4);
-
+        this.moveBuilding(this.building2, 1);
+        this.moveBuilding(this.building3, 2);
+        this.moveBuilding(this.building4, 3.5);
+        this.moveBuilding(this.building5, 3.75);
+        this.moveBuilding(this.building6, 2.3);
+        this.moveBuilding(this.building7, 4.5);
+        this.moveBuilding(this.building8, 1.8);
+        this.moveBuilding(this.building9, 1.1);
+        this.moveBuilding(this.building10, .8);
+        this.moveBuilding(this.building11, 1.1);
+        this.moveBuilding(this.building12, 1.3);
+        this.moveBuilding(this.building13, 1.2);
 
     }
 
@@ -109,7 +135,7 @@ class GameScene extends Phaser.Scene {
 
     moveBuilding(building, speed) {
         building.x -= speed;
-        if (building.x < -50) {
+        if (building.x < -100) {
             this.resetBuildingPos(building);
         }
     }
