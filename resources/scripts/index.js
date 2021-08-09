@@ -7,7 +7,6 @@ const config = {
         mode: Phaser.Scale.RESIZE,
         autoCenter: Phaser.Scale.CENTER_BOTH,
     },
-    scene: [MenuScene, PreloadScene, GameScene],
     physics: {
         default: 'arcade',
         arcade: { gravity: false}
