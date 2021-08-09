@@ -1,10 +1,10 @@
 class MenuScene extends Phaser.Scene{
     constructor() {
-        super({key: "menuScene"});
-}
-preload(){
-    //preloading the background buildings as images
-    this.load.image("Background", "resources/sprites/Background.png");
+        super("menuScene");
+    }
+    preload(){
+        //preloading the background buildings as images
+        this.load.image("Background", "resources/sprites/Background.png");
    
 
     }
@@ -17,4 +17,4 @@ preload(){
     }
    
 }
-export default MenuScene;
+//export default MenuScene;

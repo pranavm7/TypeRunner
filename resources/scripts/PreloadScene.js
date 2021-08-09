@@ -5,7 +5,7 @@ class PreloadScene extends Phaser.Scene{
 
     preload(){
         //preloading the background buildings as images
-        this.load.image("building1", "resources/sprites/Building.png");
+        this.load.image("building1", "resources/sprites/Building1.png");
         this.load.image("building2", "resources/sprites/Building2.png");
         this.load.image("building3", "resources/sprites/Building3.png");
         this.load.image("building4", "resources/sprites/Building4.png");
@@ -15,7 +15,7 @@ class PreloadScene extends Phaser.Scene{
         //preloading the background assets
         this.load.image("background", "resources/sprites/Background.png");
         this.load.image("moon", "resources/sprites/Moon.png");
-        this.load.spritesheet("corruption", "resources/sprites/Corruption.png", {
+        this.load.spritesheet("corruption", "resources/sprites/Corruption (1).png", {
             frameWidth: 64,
             frameHeight: 1024
         })
