@@ -7,7 +7,7 @@ const config = {
         mode: Phaser.Scale.RESIZE,
         autoCenter: Phaser.Scale.CENTER_BOTH,
     },
-    scene: [MenuScene],
+    scene: [MenuScene, PreloadScene, GameScene],
     physics: {
         default: 'arcade',
         arcade: { gravity: false}
@@ -18,5 +18,6 @@ const config = {
 
 //  Game Settings can go here.
 // const gameSettings = {};
-
-const game = new Phaser.Game(config);
+window.onload = function(){
+    const game = new Phaser.Game(config);
+}

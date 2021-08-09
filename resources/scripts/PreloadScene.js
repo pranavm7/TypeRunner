@@ -13,7 +13,7 @@ class PreloadScene extends Phaser.Scene{
         this.load.image("building6", "resources/sprites/Factory.png");
 
         //preloading the background assets
-        this.load.image("background", "resources/sprites/Background.png");
+        this.load.image("background", "sprites/Background.png");
         this.load.image("moon", "resources/sprites/Moon.png");
         this.load.spritesheet("corruption", "resources/sprites/Corruption.png", {
             frameWidth: 16,
@@ -39,7 +39,7 @@ class PreloadScene extends Phaser.Scene{
         //Adds loading text
         this.add.text(20, 20, "Loading game...");
         //starts the GameScene.js
-        this.Scene.start("playGame");
+        this.scene.start("playGame");
 
         //creates animation for the character at a rate of 4 frames per second
         this.anims.create({
