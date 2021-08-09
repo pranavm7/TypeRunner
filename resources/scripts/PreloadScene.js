@@ -13,7 +13,7 @@ class PreloadScene extends Phaser.Scene{
         this.load.image("building6", "resources/sprites/Factory.png");
 
         //preloading the background assets
-        this.load.image("background", "sprites/Background.png");
+        this.load.image("background", "resources/sprites/Background.png");
         this.load.image("moon", "resources/sprites/Moon.png");
         this.load.spritesheet("corruption", "resources/sprites/Corruption.png", {
             frameWidth: 16,
