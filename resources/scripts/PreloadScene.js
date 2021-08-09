@@ -24,6 +24,7 @@ class PreloadScene extends Phaser.Scene{
         this.load.image("platform1", "resources/sprites/Platform1.png");
         this.load.image("platform2", "resources/sprites/Platform2.png");
         this.load.image("platform3", "resources/sprites/Platform3.png");
+        this.load.image("plaform4", "resources/sprites/Platform4.png");
 
         //preloading the character as a spritesheet
         this.load.spritesheet("character", "resources/sprites/Computerman-spritesheet.png", {
@@ -41,7 +42,7 @@ class PreloadScene extends Phaser.Scene{
 
         //creates animation for the character at a rate of 4 frames per second
         this.anims.create({
-            key: "character.anim",
+            key: "character_anim",
             frames: this.anims.generateFrameNumbers("character"),
             frameRate: 4,
             repeat: -1
@@ -49,9 +50,9 @@ class PreloadScene extends Phaser.Scene{
 
         //create corruption animation
         this.anims.create({
-            key: "corruption.anim",
+            key: "corruption_anim",
             frames: this.anims.generateFrameNumbers("corruption"),
-            frameRate: 4,
+            frameRate: 8,
             repeat: -1
         })
 
