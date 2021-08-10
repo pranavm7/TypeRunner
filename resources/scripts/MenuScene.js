@@ -3,8 +3,7 @@ class MenuScene extends Phaser.Scene{
         super("menuScene");
     }
     init(data){
-        console.log(data)
-        console.log("it works")
+       
     }
     preload(){
         //preloading the background buildings as images
@@ -34,7 +33,7 @@ class MenuScene extends Phaser.Scene{
         const recordButton = this.add.text(600, 350, 'View the records', { 
             fill: 'red'})
             .setInteractive()
-            .on("pointerdown",() => this.scene.start("records"))
+            .on("pointerdown",() => this.scene.start("LeaderBoard"))
         
         
    

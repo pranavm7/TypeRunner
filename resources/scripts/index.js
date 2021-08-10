@@ -3,7 +3,8 @@ const config = {
     parent: 'game',
     width: 1024,
     height: 768,
-    scene: [MenuScene, PreloadScene, GameScene],
+     scene: [MenuScene, PreloadScene, GameScene,LeaderBoard],
+    
     parent: 'phaser-container',
     physics: {
         default: 'arcade',
