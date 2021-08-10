@@ -10,6 +10,9 @@ class LeaderBoard extends Phaser.Scene {
         const p3 = this.add.text(150, 415, 'Hello World', { fontFamily: '"Press Start 2P"', color: 'yellow', fontSize:'30px' });
         const p4 = this.add.text(150, 525, 'Hello World', { fontFamily: '"Press Start 2P"', color: 'yellow', fontSize:'30px' });
         const p5 = this.add.text(150, 630, 'Hello World', { fontFamily: '"Press Start 2P"', color: 'yellow', fontSize:'30px' });
+        
+        
+
         const playerList = [p1,p2,p3,p4,p5]
 
         const score1 = this.add.text(680, 180, 'Hello World', { fontFamily: '"Press Start 2P"', color: 'yellow', fontSize:'30px' });
@@ -20,6 +23,16 @@ class LeaderBoard extends Phaser.Scene {
         const scoreList = [score1,score2,score3,score4,score5]
        
         var score = '';
+        const StartButton = this.add.text(100, 125, 'start Game', { 
+          fontFamily: '"Press Start 2P"', color: 'black', fontSize:'30px'})
+         .setInteractive()
+         .on("pointerdown",() => this.scene.start("bootGame"))
+
+         const menuButton = this.add.text(600, 125, 'Main Menue', { 
+          fontFamily: '"Press Start 2P"', color: 'black', fontSize:'30px'})
+         .setInteractive()
+         .on("pointerdown",() => this.scene.start("menuScene"))
+
         const getScore = async ()=>{
             try
      {
