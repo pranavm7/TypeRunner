@@ -2,13 +2,11 @@ class MenuScene extends Phaser.Scene{
     constructor() {
         super("menuScene");
     }
-    init(data){
-        console.log(data)
-        console.log("it works")
-    }
+   
     preload(){
         //preloading the background buildings as images
         this.load.image("leaderboard", "resources/sprites/Leaderboard.png");
+        
         this.load.image("background", "resources/sprites/Background.png");
 
     }
