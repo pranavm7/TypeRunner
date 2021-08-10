@@ -8,22 +8,35 @@ class MenuScene extends Phaser.Scene{
     }
     preload(){
         //preloading the background buildings as images
-        this.load.image("background", "resources/sprites/Background.png");
+        this.load.image("background", "resources\sprites\Background.png");
 
-        
+
     }
 
     create() {
-        
-        
-        const helloButton = this.add.text(100, 100, 'Hello!', { fill: '#0f0' });
-        helloButton.setInteractive();
-        helloButton.on('pointerdown ', () => { console.log('pointerdown '); });
 
-    
-        this.scene.start("bootGame");
+
+     
+      this.background1 = this.add.tileSprite(0, 0, config.width, config.height, "background");
+      this.background1.tilePositionY = 150;
+
+     
+      
+     
+      this.background1.setOrigin(0,0);
+        const titleName = this.add.text(450,130,"Type Runner")
+
+        const StartButton = this.add.text(250, 350, 'start Game', { 
+        fill: 'red'})
+        .setInteractive()
+        .on("pointerdown",() => this.scene.start("bootGame"))
+
+        const recordButton = this.add.text(600, 350, 'View the records', { 
+            fill: 'red'})
+            .setInteractive()
+            .on("pointerdown",() => this.scene.start("records"))
         
-    }
+        
    
-}
-//export default MenuScene;
+}}
+
