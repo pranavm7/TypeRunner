@@ -4,13 +4,20 @@ const config = {
     width: 1024,
     height: 768,
     scene: [MenuScene, PreloadScene, GameScene],
+    parent: 'phaser-container',
     physics: {
         default: 'arcade',
         arcade: { gravity: false}
     },
+    dom: {
+        createContainer: true
+    },
     pixelArt: true,
     backgroundColor: 0x000000,
-    
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+    },
 };
 
 //  Game Settings can go here.
