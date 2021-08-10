@@ -150,12 +150,18 @@ class GameScene extends Phaser.Scene {
          .on('focus', function (inputText){
              if(inputText.text === 'Input text here...')
              {
-                inputText.setText('');    
+                inputText.setText('');  
+                updateTags(inputText,displayText) 
+               
              }}
             )                  
             
         const updateTags = (input, display)=>{
     var inputText = input.text;
+     if (inputText.text == 'Input text here...' || inputText.text == '')
+    {
+        this.character.x -= 3
+    } 
     var currentDisplay = display.getPlainText();
     const correctTag = `<class='correct'>`
     const incorrectTag = `<class='incorrect'>`
@@ -184,7 +190,7 @@ class GameScene extends Phaser.Scene {
     display.setText(result)
 
  }
-
+ 
         //Score updater from phaser tutorial 1
         this.score = 0;
         this.scoreLabel = this.add.bitmapText(20, 10, "pixelFont", "SCORE ", 32)
@@ -192,6 +198,7 @@ class GameScene extends Phaser.Scene {
         this.scoreLabel.text = "SCORE " + scoreFormatted;
 
         document.getElementById("inputTxtArea").readOnly = true; 
+        document.getElementById("inputTxtArea").autofocus = true; 
         //Timer functionality, initialTime decrements each second and after 5, the game can begin
         this.initialTime = 5;
         
@@ -200,7 +207,6 @@ class GameScene extends Phaser.Scene {
         this.timedEvent = this.time.addEvent({ delay: 1000, callback: this.onEvent, callbackScope: this, loop: true });
         
         document.getElementById("inputTxtArea").readOnly = false;
-        
         
 
     }
@@ -252,6 +258,7 @@ class GameScene extends Phaser.Scene {
                 this.character.x += 1
             }
             // this.character.x =0
+            
         }
 
     }
