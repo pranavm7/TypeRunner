@@ -8,7 +8,8 @@ class MenuScene extends Phaser.Scene{
     }
     preload(){
         //preloading the background buildings as images
-        this.load.image("background", "resources\sprites\Background.png");
+        this.load.image("background", "resources/sprites/Background.png");
+        this.load.image("leaderboard", "resources/sprites/Leaderboard.png");
 
 
     }
