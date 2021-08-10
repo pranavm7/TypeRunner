@@ -31,10 +31,13 @@ class records extends Phaser.Scene{
             console.error(err);
           }
         }
-        
+        const StartButton = this.add.text(150, 800, 'start Game', { 
+          fontFamily: '"Press Start 2P"', color: 'yellow', fontSize:'15px'})
+          .setInteractive()
+          .on("pointerdown",() => this.scene.start("bootGame"))
         
             
-        
+
 
     }
 }

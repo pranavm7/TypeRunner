@@ -25,12 +25,12 @@ class MenuScene extends Phaser.Scene{
         const titleName = this.add.text(450,130,"Type Runner")
 
         const StartButton = this.add.text(250, 350, 'start Game', { 
-        fill: 'red'})
+        fill: 'red', fontSize:'30px'})
         .setInteractive()
         .on("pointerdown",() => this.scene.start("bootGame"))
 
         const recordButton = this.add.text(600, 350, 'View the records', { 
-            fill: 'red'})
+            fill: 'red', fontSize:'30px'})
             .setInteractive()
             .on("pointerdown",() => this.scene.start("LeaderBoard"))
         
