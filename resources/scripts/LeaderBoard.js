@@ -58,7 +58,7 @@ class LeaderBoard extends Phaser.Scene {
 }
 
 getScore()
-this.score = `[{"id":5,"username":"annamalai","score":100000000},{"id":3,"username":"PCman","score":9999999},{"id":2,"username":"theguy","score":10000},{"id":6,"username":"monster","score":2222},{"id":1,"username":"grigsbpk","score":1000}]`
+this.score = `[{"id":5,"username":"annamalai","score":100000000},{"id":3,"username":"PranavM","score":9999999},{"id":2,"username":"theguy","score":10000},{"id":6,"username":"monster","score":2222},{"id":1,"username":"grigsbpk","score":1000}]`
 var boardList = JSON.parse(this.score)
 playerList.forEach( (uname,index) =>{
     uname.setText(boardList[index]["username"])
