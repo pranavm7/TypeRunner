@@ -28,7 +28,7 @@ class LeaderBoard extends Phaser.Scene {
          .setInteractive()
          .on("pointerdown",() => this.scene.start("bootGame"))
 
-         const menuButton = this.add.text(600, 125, 'Main Menue', { 
+         const menuButton = this.add.text(600, 125, 'Main Menu', { 
           fontFamily: '"Press Start 2P"', color: 'black', fontSize:'30px'})
          .setInteractive()
          .on("pointerdown",() => this.scene.start("menuScene"))
