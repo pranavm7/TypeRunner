@@ -17,13 +17,13 @@ class MenuScene extends Phaser.Scene{
 
 
      
-      this.background1 = this.add.tileSprite(0, 0, config.width, config.height, "background");
+      this.titleScreen = this.add.tileSprite(0, 0, config.width, config.height, "background");
       
 
      
       
      
-      this.background1.setOrigin(0,0);
+      this.titleScreen.setOrigin(0,0);
         const titleName = this.add.text(450,130,"Type Runner")
 
         const StartButton = this.add.text(250, 350, 'start Game', { 
