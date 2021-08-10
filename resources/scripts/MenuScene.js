@@ -8,7 +8,7 @@ class MenuScene extends Phaser.Scene{
     }
     preload(){
         //preloading the background buildings as images
-        this.load.image("background", "resources\sprites\Background.png");
+        this.load.image("background", "resources/sprites/Background.png");
 
 
     }
@@ -18,7 +18,7 @@ class MenuScene extends Phaser.Scene{
 
      
       this.background1 = this.add.tileSprite(0, 0, config.width, config.height, "background");
-      this.background1.tilePositionY = 150;
+      
 
      
       
